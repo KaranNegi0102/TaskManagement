@@ -1,0 +1,116 @@
+/* StartingPage.css */
+
+/* Overall Styling */
+.starting-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the container takes up full viewport height */
+  background-color: #15243b;
+  font-family: "Arial", sans-serif;
+}
+
+/* Card Styling */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for more depth */
+  padding: 40px 60px; /* More padding for spacious look */
+  text-align: center;
+  max-width: 500px; /* Maximum width to prevent it from getting too wide */
+  margin: 20px; /* Margin to ensure space around the card */
+}
+
+/* Content Styling */
+.content .title {
+  color: #131b3d;
+  font-size: 2.4em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.content .midtitle {
+  color: #19153d;
+  font-size: 1.3em;
+  margin-bottom: 40px;
+}
+
+.content .subtitle {
+  color: #19153d;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
+  transition: color 0.5s ease-in-out; /* Smooth transition for color change */
+}
+
+.content .subtitle:hover {
+  color: #202950; /* Change color on hover */
+  text-shadow: 0 0 5px rgba(62, 100, 255, 0.5); /* Add subtle text shadow */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Start slightly above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically on smaller screens */
+  align-items: center; /* Center align buttons */
+  gap: 15px; /* Space between buttons */
+}
+
+/* Button Styling */
+.action-button {
+  background-color: #131c3f;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1em; /* Slightly larger font size for better readability */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for background and transform */
+  width: 100%; /* Full width buttons */
+  max-width: 300px; /* Max width to limit button size */
+}
+
+.action-button:hover {
+  background-color: #0336ff;
+  transform: scale(1.05); /* Slightly increase size on hover for effect */
+}
+
+.action-button:active {
+  transform: scale(1); /* Reset size on active click */
+}
+
+.add-button {
+  background-color: #0c0d27; /* Green background for add button */
+}
+
+.add-button:hover {
+  background-color: #130c33; /* Darker green on hover */
+}
+
+.view-button {
+  background-color: #182c41; /* Blue background for view button */
+}
+
+.view-button:hover {
+  background-color: #0069d9; /* Darker blue on hover */
+}
+
+.logout-button {
+  background-color: #171139; /* Red background for logout button */
+}
+
+.logout-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
