@@ -10,8 +10,39 @@
   font-family: "Arial", sans-serif;
 }
 
+.light {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+     bottom: 295px;
+  position: absolute;
+  z-index: 10;
+  left: 20px;
+  animation: light 800ms ease-in-out 0s infinite alternate;
+}
+.cloud {
+  position: absolute;
+  top: 0px;
+  right: -500px;
+  opacity: .8;
+   animation: cloud 10s linear 0s infinite reverse;
+  z-index: 49;
+}
+@keyframes light {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes cloud {
+  from {right:-500px;}
+  to {right: 102%;}
+}
+
+
 /* Card Styling */
 .card {
+  position: absolute;
+  z-index: 59;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for more depth */

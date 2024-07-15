@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CSS/StartingPage.css"; // Import the CSS file for additional styling
 import axios from "axios";
+import Aeroplane from "../assets/aeroplane.png"
 
 const StartingPage = () => {
   const navigate = useNavigate();
@@ -58,6 +59,11 @@ const StartingPage = () => {
 
   return (
     <div className="starting-page-container">
+
+<div class="cloud cloud1">
+  <div class="light"></div>
+<img  src={Aeroplane}  /></div>
+
       <div className="card">
         <div className="content">
           <h1 className="title">Airport Authority of India</h1>

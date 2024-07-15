@@ -1,5 +1,8 @@
 import "./CSS/AuthPage.css";
 import { useState } from "react";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+ 
 
 const AuthPage = () => {
   const [name, setName] = useState("");
@@ -87,9 +90,9 @@ const AuthPage = () => {
               setPassword(e.target.value);
             }}
           />
-          <button type="button" onClick={togglePasswordVisibility}>
-            {passwordVisible ? "Hide" : "Show"}
-          </button>
+          <div onClick={togglePasswordVisibility}>
+            {passwordVisible ? <FaEye/> : <FaEyeSlash/>}
+          </div>
         </div>
         <label htmlFor="confirmPassword">Confirm Password</label>
         <div className="password-container">
@@ -100,9 +103,9 @@ const AuthPage = () => {
             placeholder="Enter Your Password Again"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <button type="button" onClick={toggleConfirmPasswordVisibility}>
-            {confirmPasswordVisible ? "Hide" : "Show"}
-          </button>
+          <div onClick={toggleConfirmPasswordVisibility}>
+            {confirmPasswordVisible ? <FaEye/> : <FaEyeSlash/>}
+          </div>
         </div>
         <input type="submit" value="Register" />
         <a href="/">Already a User?</a>
